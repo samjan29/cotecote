@@ -1,6 +1,6 @@
 package year2023.month01;
 
-public class Protractor19 {
+class Day19_2 {
     public int solution(int angle) {
         int answer = 0;
 

@@ -1,6 +1,6 @@
 package year2023.month01;
 
-public class ArrayAvarage20 {
+class Day20_1 {
     public double solution(int[] numbers) {
         double answer = 0;
 

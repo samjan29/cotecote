@@ -1,6 +1,6 @@
 package year2023.month01;
 
-public class SumEven20 {
+class Day20_5 {
     public int solution(int n) {
         int answer = 0;
 

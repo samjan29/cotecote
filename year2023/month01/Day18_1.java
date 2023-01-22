@@ -1,6 +1,6 @@
 package year2023.month01;
 
-public class Modulo18 {
+class Day18_1 {
     public int solution(int num1, int num2) {
         int answer = -1;
 

@@ -1,6 +1,6 @@
 package year2023.month01;
 
-public class PrintAge19 {
+class Day19_1 {
     public int solution(int age) {
         int answer = 0;
 
