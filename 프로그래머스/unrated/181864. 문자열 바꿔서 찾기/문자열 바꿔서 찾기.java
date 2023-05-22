@@ -1,7 +1,11 @@
 class Solution {
     public int solution(String myString, String pat) {
-        myString = myString.replaceAll("A", "C").replaceAll("B", "A").replaceAll("C", "B");
+        StringBuilder sb = new StringBuilder(myString.length());
         
-        return myString.contains(pat) ? 1 : 0;
+        for (int i = 0; i < myString.length(); i++) {
+            sb.append(myString.charAt(i) == 'A' ? "B" : "A");
+        }
+        
+        return sb.toString().contains(pat) ? 1 : 0;
     }
 }
