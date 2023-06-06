@@ -1,7 +1,7 @@
 class Solution {
     public int solution(String s) {
         int answer = 0;
-        int prefix = 1;
+        boolean prefix = true;
         
         for (int i = 0; i < s.length(); i++) {
             if (answer != 0) {
@@ -12,13 +12,13 @@ class Solution {
                 case '+':
                     break;
                 case '-':
-                    prefix = -1;
+                    prefix = false;
                     break;
                 default:
                     answer += s.charAt(i) - '0';
             }
         }
         
-        return answer * prefix;
+        return prefix ? answer : answer * -1;
     }
 }
