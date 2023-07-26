@@ -1,25 +1,18 @@
-import java.util.*;
+import java.util.Stack;
 
 public class Solution {
-    public int[] solution(int[] arr) {
-        int[] answer = new int[arr.length];
+    public Stack solution(int[] arr) {
+        Stack<Integer> stack = new Stack<>();
         
-        int count = 0, preNum = 0;
-        for (int num : arr) {
-            if (count == 0) {
-                answer[count++] = num;
-                preNum = num;
+        for (int i = 0; i < arr.length; i++) {
+            if (!stack.empty() && stack.peek() == arr[i]) {
                 continue;
             }
             
-            if (num == preNum) {
-                continue;
-            } else {
-                answer[count++] = num;
-                preNum = num;
-            }
+            stack.push(arr[i]);
         }
-
-        return Arrays.copyOfRange(answer, 0, count);
+        
+        
+        return stack;
     }
 }
