@@ -5,9 +5,6 @@ class Solution {
         Integer[] boxedProgress = Arrays.stream(progresses).boxed().toArray(Integer[]::new);
         Queue<Integer> progressQueue = new LinkedList<>(Arrays.asList(boxedProgress));
         
-        Integer[] boxedSpeed = Arrays.stream(speeds).boxed().toArray(Integer[]::new);
-        Queue<Integer> speedQueue = new LinkedList<>(Arrays.asList(boxedSpeed));
-        
         List<Integer> answer = new ArrayList<>();
         
         int index = 0;
@@ -26,7 +23,6 @@ class Solution {
                     index++;
                     count++;
                     progressQueue.poll();
-                    speedQueue.poll();
                 }
                 
                 answer.add(count);
