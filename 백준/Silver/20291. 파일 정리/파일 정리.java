@@ -1,12 +1,11 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         Map<String, Integer> map = new HashMap<>();
 
         int N = Integer.parseInt(br.readLine());
@@ -22,13 +21,16 @@ public class Main {
         Collections.sort(list);
 
         int size = list.size();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < size; i++) {
-            StringBuffer sb = new StringBuffer();
-            sb.append(list.get(i)).append(" ").append(map.get(list.get(i)));
-            System.out.println(sb.toString());
+            sb.append(list.get(i)).append(" ").append(map.get(list.get(i))).append("\n");
+            bw.write(sb.toString());
+            sb.setLength(0);
         }
-
+        
         br.close();
+        bw.flush();
+        bw.close();
     }
 
 }
