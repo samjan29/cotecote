@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.AnnotatedArrayType;
 import java.util.*;
 
 public class Main {
@@ -30,7 +29,7 @@ public class Main {
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
-        
+
         br.close();
     }
 
