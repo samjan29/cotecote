@@ -9,7 +9,7 @@ public class Main {
 
         int n = Integer.parseInt(br.readLine());
 
-        Set<String> set = new HashSet<>();
+        Set<String> set = new TreeSet<>(Comparator.reverseOrder());
         while (n > 0) {
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
             String name = st.nextToken();
@@ -23,15 +23,10 @@ public class Main {
             n--;
         }
 
-        List<String> list = new ArrayList<>(set);
-        set.clear();
-        list.sort(Collections.reverseOrder());
-
-        int size = list.size();
-        for (int i = 0; i < size; i++) {
-            bw.write(list.get(i) + "\n");
+        for (String str : set) {
+            bw.write(str + "\n");
         }
-        
+
         br.close();
         bw.flush();
         bw.close();
