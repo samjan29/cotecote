@@ -8,6 +8,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
         Set<String> set = new HashSet<>();
 
         String S = br.readLine();
@@ -18,11 +19,11 @@ public class Main {
             set.add(before);
 
             for (int j = i + 1; j < len; j++) {
-                StringBuffer sb = new StringBuffer();
                 sb.append(before).append(S.charAt(j));
 
                 set.add(sb.toString());
                 before = sb.toString();
+                sb.setLength(0);
             }
         }
 
