@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
 
@@ -11,7 +12,8 @@ public class Main {
         int N = Integer.parseInt(br.readLine());
 
         while (N > 0) {
-            String[] arr = br.readLine().split(" ");
+            StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+            String[] arr = {st.nextToken(), st.nextToken()};
 
             int X = Integer.parseInt(arr[1]);
             switch (arr[0]) {
