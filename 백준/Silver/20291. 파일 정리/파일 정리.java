@@ -1,12 +1,13 @@
 import java.io.*;
-import java.util.*;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        Map<String, Integer> map = new HashMap<>();
+        Map<String, Integer> map = new TreeMap<>();
 
         int N = Integer.parseInt(br.readLine());
 
@@ -17,17 +18,13 @@ public class Main {
             N--;
         }
 
-        List<String> list = new ArrayList<>(map.keySet());
-        Collections.sort(list);
-
-        int size = list.size();
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < size; i++) {
-            sb.append(list.get(i)).append(" ").append(map.get(list.get(i))).append("\n");
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            sb.append(entry.getKey()).append(" ").append(entry.getValue()).append("\n");
             bw.write(sb.toString());
             sb.setLength(0);
         }
-        
+
         br.close();
         bw.flush();
         bw.close();
