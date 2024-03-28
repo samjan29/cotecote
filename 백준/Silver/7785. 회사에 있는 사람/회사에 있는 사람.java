@@ -27,8 +27,8 @@ public class Main {
 
         List<String> list = new ArrayList<>(set);
         list.sort(Collections.reverseOrder());
-        for (String str : list) {
-            System.out.println(str);
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
         }
         
         br.close();
