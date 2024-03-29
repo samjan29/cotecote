@@ -22,15 +22,7 @@ public class Main {
         
         long count = n * (n - 1) / 2;
         System.out.println(count);
-        int degree;
-        if (count >= Math.pow(n, 4)) {
-            degree = 4;
-        } else if (count >= Math.pow(n, 3)) {
-            degree = 3;
-        } else {
-            degree = 2;
-        }
-        System.out.println(degree);
+        System.out.println(2);
 
         br.close();
     }
