@@ -18,10 +18,18 @@ public class Main {
             } else {
                 tmp = charArr[i] - '0';
             }
-            answer += (long) (Math.pow(n, charArr.length - 1 - i) * tmp);
+            answer += pow(n, charArr.length - 1 - i) * tmp;
         }
 
         System.out.println(answer);
         br.close();
+    }
+
+    public static long pow(int x, int y) {
+        long result = 1;
+        for (int i = 0; i < y; i++) {
+            result *= x;
+        }
+        return result;
     }
 }
