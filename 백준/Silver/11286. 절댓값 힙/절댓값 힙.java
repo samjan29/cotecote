@@ -12,7 +12,7 @@ import java.util.PriorityQueue;
         배열에서 그 수를 제거
 
     입력: N(1<=N<=100,000)
-        x(-2^31<x<=2^31 => -21,4748,3648<x<=21,4748,3647 -> int 범위 초과)
+        x(-2^31<x<=2^31 => -21,4748,3648<x<=21,4748,3647 -> int MIN과 MAX)
     출력: 1. 절댓값이 가장 작은 수가 여러개이면, 기존 값이 가장 작은 값을 출력
         2. 배열이 비어있을 경우 0 출력
 
@@ -52,7 +52,7 @@ public class Main {
         PriorityQueue<MinimumX> pq = new PriorityQueue<>();
         StringBuilder sb = new StringBuilder();
         while (n-- > 0) {
-            long x = Long.parseLong(br.readLine());
+            int x = Integer.parseInt(br.readLine());
             if (x == 0) {   // 0이 입력되면 가장 작은 값을 출력
                 if (pq.isEmpty()) { // 배열이 비어있을 경우 0 출력
                     sb.append(0).append("\n");
@@ -70,10 +70,10 @@ public class Main {
     }
 
     private static class MinimumX implements Comparable<MinimumX> {
-        long absVal;
-        long oriVal;
+        int absVal;
+        int oriVal;
 
-        public MinimumX(long absVal, long oriVal) {
+        public MinimumX(int absVal, int oriVal) {
             this.absVal = absVal;
             this.oriVal = oriVal;
         }
