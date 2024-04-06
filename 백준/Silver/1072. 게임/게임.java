@@ -53,7 +53,6 @@ public class Main {
         X = Long.parseLong(split[0]);
         Y = Long.parseLong(split[1]) * 100L;
         nowPercent = Math.floor((double) Y / X)  + 1.0;
-        final double v = (double) Y / X;
 
         if (nowPercent >= 100.0) {  // 위에서 + 1 해놔서 조건이 100.0보다 크면
             System.out.println(-1);
