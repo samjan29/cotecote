@@ -13,7 +13,6 @@ import java.util.StringTokenizer;
     출력: S가 되는 부분 수열의 개수
 
     풀이: 원소를 넣었다 안 넣었다 해야함
-        어떻게 해야하지 뭔소리야
  */
 public class Main {
 
@@ -58,6 +57,7 @@ public class Main {
         -7 -3 -2 X X
         -7 -3  X 5 8
         -7 -3  X 5 X
+        -7 -3  X X 8
         -7 -3  X X X
      */
 
