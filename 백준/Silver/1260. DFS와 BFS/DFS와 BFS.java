@@ -70,7 +70,7 @@ public class Main {
         visited[vertex] = true;
         sb.append(vertex).append(' ');
 
-        for (int connectedVertex : connected[vertex]) {
+        for (int connectedVertex : connected[vertex]) { // O(n)
             if (!visited[connectedVertex]) {
                 dfs(connectedVertex, depth + 1);
             }
@@ -78,15 +78,15 @@ public class Main {
     }
 
     public static void bfs(int vertex) {
-        visited[vertex] = true;
         Queue<Integer> queue = new LinkedList<>();
+        visited[vertex] = true;
         queue.offer(vertex);
         sb.append(vertex).append(' ');
 
         while (!queue.isEmpty()) {
             int now = queue.poll();
 
-            for (int connectedVertex : connected[now]) {
+            for (int connectedVertex : connected[now]) {    // O(n)
                 if (!visited[connectedVertex]) {
                     visited[connectedVertex] = true;
                     queue.offer(connectedVertex);
